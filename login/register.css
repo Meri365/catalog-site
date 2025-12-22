@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins';
+  color: rgba(147, 15, 81, 0.886);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(170, 143, 231);
+}
+
+.container {
+  position: relative;
+  width: 460px;
+  height: 700px;
+  border: 2px solid rgba(147, 15, 81, 0.886);
+  box-shadow: 0 0 25px rgba(147, 15, 81, 0.886);
+}
+.container .form-box {
+  position: absolute;
+  padding-left: 40px;
+  padding-right: 60px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Correct selector (NO space) */
+.form-box.Reg {
+  padding: 0 33px;
+}
+
+.form-box {
+  position: relative; /* anchor for close button */
+}
+
+.form-box > a {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* top-right inside form-box */
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.form-box > a:hover {
+  transform: scale(1.15);
+  color: rgba(147, 15, 81, 0.886);
+}
+
+.form-box h2 {
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
+.form-box .input-box {
+  position: relative;
+  width: 100%; /* կլցնի ծնողի (.form-box) ամբողջ լայնությունը*/
+  height: 50px; /*սահմանում է input-ի ամբողջ բլոկի բարձրությունը*/
+  margin-top: 25px;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px; /*input ի ներսի տառաչափը*/
+  color: white;
+  font-weight: 600; /*տեքստը կդառնա մի քիչ հաստ*/
+  border-bottom: 2px solid white;
+  padding-right: 23px;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border-bottom: 2px solid rgba(147, 15, 81, 0.886);
+  transition: 0.5s;
+}
+.input-box label {
+  position: absolute; /*label-ը տեղադրվում է input-ի ներսում, դուրս հոսքից*/
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  color: rgba(147, 15, 81, 0.886);
+}
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 18px;
+  transform: translateY(-50%);
+}
+.input-box input:focus ~ i,
+.input-box input:valid ~ i {
+  color: rgba(147, 15, 81, 0.886);
+  transition: 0.5s;
+}
+.input-box select {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+/* label-ը default դիրքում */
+.input-box select ~ label {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* երբ focus կամ ընտրված արժեք կա */
+.input-box select:focus ~ label,
+.input-box select:valid ~ label {
+  top: -5px;
+  color: rgba(147, 15, 81, 0.886);
+}
+
+.btn {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  background: transparent;
+  font-size: 16px; /*սահմանում է տեքստի բարձրությունը (մինչև 16 pixels բարձր կլինի տառը):*/
+  font-weight: 600; /*սահմանում է տառի հաստությունը (weight), այստեղ 600 համարվում է միջին-հաստ (մոտ semibold):*/
+  cursor: pointer;
+  border: 2px solid rgba(147, 15, 81, 0.886);
+  overflow: hidden; /*ծածկելու համար*/
+  z-index: 1;
+  color: white;
+}
+.btn::before {
+  /*ստեղծում է կոճակի pseudo-element (կեղծ տարր)՝այս դեպքում gradient animation:*/
+  content: ''; /*Purpose: pseudo-element-ի պարունակությունը. Եթե չնշես content, pseudo-element-ը չի երևա:*/
+  position: absolute;
+  height: 300%;
+  width: 100%;
+  background: linear-gradient(#25252b, #ff2770, #25252b, #ff2770);
+  top: -100%;
+  left: 0;
+  z-index: -1; /*login երևալու համար;pseudo-element-ը դնում է կոճակի ետևում, որպեսզի տեքստը (Login) տեսանելի լինի:*/
+  transition: 0.5s;
+}
+.btn:hover:before {
+  top: 0;
+}
+.regi-link {
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+.regi-link a {
+  position: relative;
+  text-decoration: none; /*underline will not appear(չերևա) */
+
+  color: rgba(147, 15, 81, 0.886);
+}
+
+
+.regi-link a:hover {
+  text-decoration: underline;
+  transition: 0.5s;
+}
+

@@ -1,0 +1,153 @@
+body {
+  background: #fbf9f4;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+
+  border-bottom: 3px solid #500c20ed;
+  padding-bottom: 10px;
+  display: inline-block;
+
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.but1 {
+  position: absolute;
+  right: 20px;
+  /*  աջից հեռավորությունը */
+  top: 50px;
+  /* Կարող ես տեղավորել վերից */
+  font-size: 15px;
+  font-family: initial;
+  background-color: #fbf9f4;
+  color: #3c101e;
+  white-space: nowrap;
+  min-width: auto;
+  border: 1.3px solid #3c101e;
+  border-radius: 8px;
+  padding: 8px 13px;
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+.but1:hover {
+  background: #3e1622ed;
+  color: #fbf9f4;
+}
+
+.but1:active {
+  background: #fbf9f4;
+  color: #3c101e;
+}
+
+.message.success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.message.error {
+  color: #500c20ed;
+  margin-bottom: 10px;
+}
+
+table {
+  margin-bottom: 80px;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px #500c20ed;
+  border-radius: 10px;
+}
+
+th,
+td {
+  font-family: Arial;
+  border: 1px solid #540e24ed;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  font-family: Arial;
+  background: #540e24ed;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #ffffffdc;
+}
+
+.colorpart {
+  width: 100%;
+  height: 60px;
+  background-color: #540e24ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.colorpart h2 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  /* փոքր ստվեր */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.form-container {
+  width: 420px;
+  background: #eee;
+  padding: 30px;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3e1622ed;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background: #fff;
+  font-size: 14px;
+}
+
+textarea {
+  height: 90px;
+  resize: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #540e24ed;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: #cfcfcf;
+}
