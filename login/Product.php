@@ -61,5 +61,17 @@ class Product {
         $stmt->close();
         return $products;
     }
+
+    public function getAllProducts() {
+        $products = [];
+        $stmt = $this->conn->prepare("SELECT name, description, quantity, weight, color, price FROM products ORDER BY created_at DESC");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while ($row = $result->fetch_assoc()) {
+            $products[] = $row;
+        }
+        $stmt->close();
+        return $products;
+    }
 }
 ?>

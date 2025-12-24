@@ -1,3 +1,13 @@
+<?php
+    require_once __DIR__ . "/login/Database.php";
+    require_once __DIR__ . "/login/Product.php";
+
+    $db = new Database();
+    $productObj = new Product($db->conn, null); // user_id not needed for all products
+
+    $allProducts = $productObj->getAllProducts();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,6 +90,38 @@
                 <a href="#" class="btn0">Read more</a>
             </div>
         </div>
+    </div>
+
+    <div class="box">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Weight</th>
+                    <th>Color</th>
+                    <th>Price</th>
+                </tr>
+                <?php if (!empty($allProducts)): ?>
+                <?php foreach ($allProducts as $p): ?>
+                <tr>
+                    <td><?= htmlspecialchars($p['name']) ?></td>
+                    <td><?= htmlspecialchars($p['description']) ?></td>
+                    <td><?= $p['quantity'] ?></td>
+                    <td><?= htmlspecialchars($p['weight']) ?></td>
+                    <td><?= htmlspecialchars($p['color']) ?></td>
+                    <td>$<?= number_format($p['price'], 2) ?></td>
+                </tr>
+                <?php endforeach; ?>
+                <?php else: ?>
+                <tr>
+                    <td colspan="6" style="text-align:center;">No products yet</td>
+                </tr>
+                <?php endif; ?>
+
+            </tbody>
+        </table>
     </div>
 
     <footer style="background-color:rgba(118, 13, 13, 0.886)" class="site-footer">
