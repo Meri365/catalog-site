@@ -23,11 +23,7 @@ require "dashboard_action.php";
 
 </style>
 
-
 <body>
-
-
-
     <h1>Products</h1>
     <button id="logout" class="but1" type="button" onclick="window.location.href='../page2.php'">Log out</button>
     <?php if ($success_message): ?> <div class=" message success"><?= htmlspecialchars($success_message) ?>

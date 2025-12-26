@@ -9,7 +9,7 @@ body {
 
 header {
   margin: 0;
-  padding: 20px 60px; /* ցանկալի է հստակ տիրույթ */
+  padding: 20px 60px; 
   box-sizing: border-box;
 
   position: fixed;
@@ -17,8 +17,8 @@ header {
   left: 0;
   width: 100%;
 
-  background: rgba(118, 13, 13, 0.886); /* թափանցիկ կանաչ */
-  backdrop-filter: blur(6px); /* glass effect */
+  background: rgba(118, 13, 13, 0.886); 
+  backdrop-filter: blur(6px); 
   -webkit-backdrop-filter: blur(6px);
 
   color: white;
@@ -31,23 +31,23 @@ header {
   z-index: 1000;
 }
 .hero-section {
-  position: relative; /* overlay-ի համար */
-  width: 100%; /* ամբողջ լայնությունը */
-  height: 400px; /* կարող ես փոխել ըստ ցանկության */
+  position: relative; 
+  width: 100%; 
+  height: 400px; 
   overflow: hidden;
-  margin-top: 20px; /* space վերևից, եթե navbar կա */
+  margin-top: 20px; 
 }
 
 .hero-section img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* նկարը լրիվ տարածքը ծածկի */
-  filter: brightness(70%); /* text-ը կարդացվի հեշտ */
+  object-fit: cover; 
+  filter: brightness(70%); 
   transition: transform 0.5s ease;
 }
 
 .hero-section:hover img {
-  transform: scale(1.05); /* թեթև zoom on hover */
+  transform: scale(1.05); 
 }
 
 .hero-text {
@@ -127,9 +127,9 @@ nav a:hover {
 }
 
 .img2 {
-  position: relative; /* overlay-ի համար */
-  width: 100%; /* ամբողջ լայնությունը */
-  height: 400px; /* կարող ես փոխել ըստ ցանկության */
+  position: relative; 
+  width: 100%; 
+  height: 400px; 
   max-height: 400px;
   min-height: 200px;
   margin-top: 10px;
@@ -140,7 +140,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center; /* կենտրոնը միշտ երևա */ /* նկարը լրիվ տարածքը ծածկի */
+  object-position: center; 
 }
 
 .img2-text {
@@ -156,163 +156,14 @@ nav a:hover {
   font-family: 'Times New Roman', serif;
 }
 
-/* Basic reset for carousel components */
-.bf-carousel {
-  position: relative;
-  width: 100%;
-  background: #fff;
-  color: #111;
-  padding: 18px 24px;
-  box-sizing: border-box;
-  overflow: visible;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial;
-}
 
-/* Arrows */
-.bf-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  font-size: 20px;
-  line-height: 1;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.bf-arrow:active {
-  transform: translateY(-50%) scale(0.97);
-}
-.bf-prev {
-  left: 12px;
-}
-.bf-next {
-  right: 12px;
-}
-
-/* viewport hides overflow but track scrolls */
-.bf-viewport {
-  overflow: hidden;
-  margin: 0 64px; /* space for arrows */
-  padding: 6px 0;
-}
-
-/* track - flex row horizontally */
-.bf-track {
-  display: flex;
-  gap: 18px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  transition: transform 0.3s cubic-bezier(0.22, 0.9, 0.2, 1);
-  will-change: transform;
-  /* allow smooth dragging by using translate */
-}
-
-/* card sizing: responsive - show ~3 on desktop, 2 on tablet, 1.2 on phone */
-.bf-card {
-  flex: 0 0 calc((100% - 36px) / 3); /* default 3 cards layout */
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 260px;
-  cursor: grab;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.bf-card:active {
-  cursor: grabbing;
-}
-
-/* image area */
-.bf-image {
-  flex: 1 1 auto;
-  background-size: cover;
-  background-position: center;
-  min-height: 160px;
-  transition: transform 0.4s ease, filter 0.25s ease;
-}
-
-/* info area */
-.bf-info {
-  padding: 12px 14px;
-  background: #fff;
-  text-align: left;
-}
-.bf-info h3 {
-  margin: 0 0 8px 0;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-}
-.bf-cta {
-  display: inline-block;
-  font-size: 13px;
-  text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  background: transparent;
-  color: #111;
-  box-shadow: none;
-  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
-}
-.bf-cta:hover {
-  transform: translateY(-2px);
-  text-decoration: underline;
-}
-
-/* hover zoom/animation */
-.bf-card:hover .bf-image,
-.bf-card:focus .bf-image {
-  transform: scale(1.06);
-  filter: saturate(1.05);
-}
-.bf-card:hover,
-.bf-card:focus {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
-}
-
-/* responsiveness */
-@media (max-width: 1000px) {
-  .bf-card {
-    flex: 0 0 calc((100% - 18px) / 2);
-  } /* 2 per row */
-  .bf-viewport {
-    margin: 0 56px;
-  }
-}
-@media (max-width: 600px) {
-  .bf-card {
-    flex: 0 0 85%;
-  } /* show ~1.1 cards */
-  .bf-viewport {
-    margin: 0 44px;
-  }
-  .bf-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-  }
-}
 
 .scroll-container {
   margin-top: 0;
   margin-bottom: 50px;
-  width: 100%; /* ամբողջ լայնությունը */
-  overflow: hidden; /* խափանում է, որպեսզի տեքստը դուրս չերևա */
-  background-color: rgb(60, 16, 30); /* optional՝ տեսանելի համար */
+  width: 100%; 
+  overflow: hidden;
+  background-color: rgb(60, 16, 30); 
 }
 
 .scrolling-text {

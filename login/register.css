@@ -32,19 +32,19 @@ body {
   flex-direction: column;
 }
 
-/* Correct selector (NO space) */
+
 .form-box.Reg {
   padding: 0 33px;
 }
 
 .form-box {
-  position: relative; /* anchor for close button */
+  position: relative; 
 }
 
 .form-box > a {
   position: absolute;
   top: 10px;
-  right: 10px; /* top-right inside form-box */
+  right: 10px;
   font-size: 22px;
   color: white;
   text-decoration: none;
@@ -64,8 +64,8 @@ body {
 }
 .form-box .input-box {
   position: relative;
-  width: 100%; /* կլցնի ծնողի (.form-box) ամբողջ լայնությունը*/
-  height: 50px; /*սահմանում է input-ի ամբողջ բլոկի բարձրությունը*/
+  width: 100%; 
+  height: 50px; 
   margin-top: 25px;
 }
 .input-box input {
@@ -74,9 +74,9 @@ body {
   background: transparent;
   border: none;
   outline: none;
-  font-size: 14px; /*input ի ներսի տառաչափը*/
+  font-size: 14px;
   color: white;
-  font-weight: 600; /*տեքստը կդառնա մի քիչ հաստ*/
+  font-weight: 600; 
   border-bottom: 2px solid white;
   padding-right: 23px;
 }
@@ -86,7 +86,7 @@ body {
   transition: 0.5s;
 }
 .input-box label {
-  position: absolute; /*label-ը տեղադրվում է input-ի ներսում, դուրս հոսքից*/
+  position: absolute; 
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -141,8 +141,8 @@ body {
   height: 40px;
   border-radius: 50px;
   background: transparent;
-  font-size: 16px; /*սահմանում է տեքստի բարձրությունը (մինչև 16 pixels բարձր կլինի տառը):*/
-  font-weight: 600; /*սահմանում է տառի հաստությունը (weight), այստեղ 600 համարվում է միջին-հաստ (մոտ semibold):*/
+  font-size: 16px;
+  font-weight: 600; 
   cursor: pointer;
   border: 2px solid rgba(147, 15, 81, 0.886);
   overflow: hidden; /*ծածկելու համար*/
@@ -150,8 +150,7 @@ body {
   color: white;
 }
 .btn::before {
-  /*ստեղծում է կոճակի pseudo-element (կեղծ տարր)՝այս դեպքում gradient animation:*/
-  content: ''; /*Purpose: pseudo-element-ի պարունակությունը. Եթե չնշես content, pseudo-element-ը չի երևա:*/
+  content: ''; 
   position: absolute;
   height: 300%;
   width: 100%;
@@ -171,7 +170,7 @@ body {
 }
 .regi-link a {
   position: relative;
-  text-decoration: none; /*underline will not appear(չերևա) */
+  text-decoration: none;
 
   color: rgba(147, 15, 81, 0.886);
 }

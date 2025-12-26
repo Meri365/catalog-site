@@ -65,9 +65,6 @@
                     </select>
                     <label>Gender</label>
                 </div>
-
-
-
                 <div class="input-box">
                     <button class="btn" type="submit">register</button>
                 </div>
@@ -91,11 +88,7 @@
               }
             ?>
         </div>
-
-
     </div>
-
-
 </body>
 
 </html>

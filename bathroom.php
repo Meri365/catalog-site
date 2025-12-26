@@ -5,19 +5,13 @@
 
      <title>Bedroom</title>
      <link rel="stylesheet" href="page2.css">
-
-
  </head>
 
  <body>
-
      <header>
          <div class="logo">MODERN STYLE</div>
 
      </header>
-
-
-
      <div class="page2buttons">
          <button id="btnHome" class="but1" type="button">HOME</button>
          <button id="btnPage2" class="but1" type="button">PAGE@</button>
@@ -30,10 +24,6 @@
              <button class="but4" type="button" onclick="window.location.href='login/register.php'">Register</button>
          </div>
      </div>
-
-
-
-
      <div class="img1">
          <img src="images6/img7.webp" alt="kitchen">
      </div>
@@ -45,9 +35,6 @@
 
          </div>
      </div>
-
-
-
      <div class="ads">
          <h2>Elevate Your Everyday Routine</h2>
          <p>Create Your Perfect Sanctuary – A Bathroom That Combines Modern Design, Comfort, and Everyday Luxury.</p>
@@ -115,14 +102,10 @@
                  </div>
              </div>
          </div>
-
-
          <hr>
          <div class="footer-text">© 2025 Your Company. All rights reserved.</div>
          </div>
      </footer>
-
-
      <script src="page2.js"></script>
  </body>
 

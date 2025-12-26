@@ -17,9 +17,7 @@ h1 {
 .but1 {
   position: absolute;
   right: 20px;
-  /*  աջից հեռավորությունը */
   top: 50px;
-  /* Կարող ես տեղավորել վերից */
   font-size: 15px;
   font-family: initial;
   background-color: #fbf9f4;
@@ -96,8 +94,6 @@ tr:nth-child(even) {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-
-  /* փոքր ստվեր */
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 

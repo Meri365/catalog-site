@@ -32,16 +32,16 @@ body {
 }
 
 .form-box {
-  position: relative; /* anchor for absolute children */
+  position: relative; 
 }
 
-/* FIXED selector */
+
 .form-box.Login {
   left: 0;
   padding: 0 20px;
 }
 
-/* CLOSE BUTTON */
+
 .close-btn {
   position: absolute;
   top: 15px;
@@ -67,7 +67,7 @@ body {
 .form-box .input-box {
   position: relative;
   width: 100%; 
-  height: 50px; /*սահմանում է input-ի ամբողջ բլոկի բարձրությունը*/
+  height: 50px; 
   margin-top: 25px;
 }
 .input-box input {
@@ -78,7 +78,7 @@ body {
   outline: none;
   font-size: 14px;
   color: white;
-  font-weight: 600; /*տեքստը կդառնա մի քիչ հաստ*/
+  font-weight: 600; 
   border-bottom: 2px solid white;
   padding-right: 23px;
 }
@@ -88,7 +88,7 @@ body {
   transition: 0.5s;
 }
 .input-box label {
-  position: absolute; /*label-ը տեղադրվում է input-ի ներսում, դուրս հոսքից*/
+  position: absolute; 
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -120,23 +120,23 @@ body {
   height: 40px;
   border-radius: 50px;
   background: transparent;
-  font-size: 16px; /*սահմանում է տեքստի բարձրությունը (մինչև 16 pixels բարձր կլինի տառը):*/
-  font-weight: 600; /*սահմանում է տառի հաստությունը (weight), այստեղ 600 համարվում է միջին-հաստ (մոտ semibold):*/
+  font-size: 16px; 
+  font-weight: 600; 
   cursor: pointer;
   border: 2px solid rgba(147, 15, 81, 0.886);
-  overflow: hidden; /*ծածկելու համար*/
+  overflow: hidden;
   z-index: 1;
 }
 .btn::before {
-                /*ստեղծում է կոճակի pseudo-element (կեղծ տարր)՝այս դեպքում gradient animation:*/
-  content: ''; /*Purpose: pseudo-element-ի պարունակությունը. Եթե չնշես content, pseudo-element-ը չի երևա:*/
+                
+  content: ''; 
   position: absolute;
   height: 300%;
   width: 100%;
   background: linear-gradient(#25252b, #ff2770, #25252b, #ff2770);
   top: -100%;
   left: 0;
-  z-index: -1; /*login երևալու համար;pseudo-element-ը դնում է կոճակի ետևում, որպեսզի տեքստը (Login) տեսանելի լինի:*/
+  z-index: -1; 
   transition: 0.5s;
 }
 .btn:hover:before {
@@ -148,7 +148,7 @@ body {
   margin: 20px 0 10px;
 }
 .regi-link a {
-  text-decoration: none; /*underline will not appear(չերևա) */
+  text-decoration: none; 
   font-weight: 600;
   color: rgba(147, 15, 81, 0.886);
 }
@@ -159,7 +159,7 @@ body {
 .info-content {
   width: 50%; /* container-ի կեսը */
   height: 100%;
-  float: right; /* տեղափոխում է աջ կողմ */
+  float: right;
   display: flex;
   justify-content: center;
   align-items: center;

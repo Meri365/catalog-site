@@ -74,7 +74,6 @@ class User {
             return ['success' => false, 'errors' => $errors];
         }
 
-        // Use md5 for now (but better: password_hash in production)
         $hashedPassword = md5($password);
 
         $stmt = $this->conn->prepare("SELECT id, name FROM users WHERE email = ? AND password = ?");
